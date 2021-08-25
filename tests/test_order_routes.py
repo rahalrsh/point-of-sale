@@ -68,7 +68,7 @@ def test_add_order__success(test_client, add_test_item):
 
     assert response.status_code == 200
     assert response.content_type == 'application/json'
-    assert b'"order_id": 1' in response.data
+    assert b'"order_id":1' in response.data
 
 
 def test_add_order__fail_with_validation_error(test_client, add_test_item):
@@ -156,8 +156,8 @@ def test_get_order_by_id__success(test_client, add_test_item, add_test_order):
     response = test_client.get("/api/v1/orders/1", content_type="application/json")
     assert response.status_code == 200
     assert response.content_type == 'application/json'
-    assert b'"id": 1' in response.data
-    assert b' "ordered_quantity": 2' in response.data
+    assert b'"id":1' in response.data
+    assert b'"ordered_quantity":2' in response.data
 
 
 def test_get_order_by_id__fail_order_not_found(test_client):

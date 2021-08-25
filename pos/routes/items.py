@@ -110,7 +110,7 @@ def get_item_by_id(item_id):
 @items_bp.route('/<int:item_id>', methods=['PUT'])
 def update_item_by_id(item_id):
     """
-    Description: Get an item by item_id
+    Description: Update an item by item_id
     URL: api/v1/items/123
     Method: PUT
     Content Type: application/json

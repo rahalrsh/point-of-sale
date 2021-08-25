@@ -44,7 +44,7 @@ def test_add_item__success(test_client):
 
     assert response.status_code == 200
     assert response.content_type == 'application/json'
-    assert b'"description": "Burger"' in response.data
+    assert b'"description":"Burger"' in response.data
 
 
 def test_add_item__fail_with_validation_error(test_client):
@@ -69,7 +69,7 @@ def test_get_all_items__success(test_client, add_test_item):
     response = test_client.get("/api/v1/items", content_type="application/json")
     assert response.status_code == 200
     assert response.content_type == 'application/json'
-    assert b'"description": "Pizza"' in response.data
+    assert b'"description":"Pizza"' in response.data
 
 
 def test_get_all_items__fail_items_not_found(test_client):
@@ -87,7 +87,7 @@ def test_get_item_by_id__success(test_client, add_test_item):
     response = test_client.get("/api/v1/items/1", content_type="application/json")
     assert response.status_code == 200
     assert response.content_type == 'application/json'
-    assert b'"description": "Pizza"' in response.data
+    assert b'"description":"Pizza"' in response.data
 
 
 def test_get_item_by_id__fail_item_not_found(test_client):
@@ -111,8 +111,8 @@ def test_update_item_by_id__success(test_client, add_test_item):
     response = test_client.put("/api/v1/items/1", data=put_data, content_type="application/json")
     assert response.status_code == 200
     assert response.content_type == 'application/json'
-    assert b'"price": 10.0' in response.data
-    assert b'"description": "Salad"' in response.data
+    assert b'"price":10.0' in response.data
+    assert b'"description":"Salad"' in response.data
 
 
 def test_remove_item_by_id__success(test_client, add_test_item):
@@ -121,4 +121,4 @@ def test_remove_item_by_id__success(test_client, add_test_item):
     response = test_client.delete("/api/v1/items/1", content_type="application/json")
     assert response.status_code == 200
     assert response.content_type == 'application/json'
-    assert b'"id": 1' in response.data
+    assert b'"id":1' in response.data

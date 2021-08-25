@@ -1,11 +1,8 @@
-import os
-
-
 class Config:
     # General Configs
-    TESTING = True
-    DEBUG = True
-    PORT = 5012
+    TESTING = False
+    DEBUG = False
+    PORT = 5000
 
     # Database Configs
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../pos.db'
