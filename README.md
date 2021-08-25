@@ -77,7 +77,7 @@ Note: locally the Flask application will be running on http://127.0.0.1:5000/
 
 3) Get an item by id
 ```text
-    URL: api/v1/items/123
+    URL: api/v1/items/1
     
     Method: GET
     
@@ -93,7 +93,7 @@ Note: locally the Flask application will be running on http://127.0.0.1:5000/
 
 4) Update an item by id
 ```text
-    URL: api/v1/items/123
+    URL: api/v1/items/1
     
     Method: PUT
     
@@ -115,7 +115,7 @@ Note: locally the Flask application will be running on http://127.0.0.1:5000/
 
 5) Delete an item by id
 ```text
-    URL: api/v1/items/123
+    URL: api/v1/items/1
     
     Method: DELETE
     
@@ -163,7 +163,7 @@ Note: locally the Flask application will be running on http://127.0.0.1:5000/
 
 7) Get an order by order id
 ```text
-    URL: api/v1/orders/1234
+    URL: api/v1/orders/1
     
     Method: GET
     
