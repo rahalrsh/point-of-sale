@@ -12,9 +12,7 @@ pip3 install -r requirements.txt
 
 2) Init Database and run migrations
 ```bash
-flask db init
-flask db migrate
-flask db upgrade
+flask db init && flask db migrate && flask db upgrade
 ```
 
 3) Start Flask application
